@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta&display=swap');
+
+
+:root {
+    --main-color: black; 
+    --accent-color: white;
+    font-family: 'Mukta', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+header .logo {
+font-family: 'Krona One', sans-serif;
+font-size: 3.5rem;
+text-align: center;
+}
+
+header .menu-items {
+    flex:1;
+    justify-content: space-around;
+    display: none;
+}
+
+header .menu-items a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: transparent;
+    padding: 5px;
+}
+
+header .menu-items a:hover {
+    border: 1px solid var(--main-color);
+}
+
+/* Burger menu */
+
+#burger-checkbox {
+display: none;
+}
+
+.header-nav input:checked ~ .menu-items {
+  display: block;  
+}
+
+@media (min-width: 769px) {
+
+  .burger-icon {
+display: none;
+  }  
+    header .header-nav {
+    display: flex;
+    }
+
+header #burger-checkbox ~ .menu-items {
+
+display: flex;
+align-items: center;
+ }
+}
+
+header .header-banner {
+    background-image: url(../img/baby-yoda.svg);
+    background-size: cover;
+    min-height: 450px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+header .header-banner h1 {
+ color: var(--accent-color);
+ font-family: 'Krona One', sans-serif;
+ font-size: 3.5rem;
+}
+
+.product-card img {
+    width: 100%;
+}
+
+.product-card .product-buttons {
+display: flex;
+justify-content: space-around;
+}
+
+@media (min-width: 540px) {
+.product-list {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 5px;
+    }
+}
+
+@media (min-width: 660px) {
+.product-list {
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 5px;
+    }
+}
+
+@media (min-width: 980px) {
+.product-list {
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 5px;
+    }
+}
+
+/* Controls */
+
+.button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.7s;
+    background-color: transparent;
+}
+
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card-button {
+    border-color: black;
+    color: black;
+}
+
+.card-button:hover {
+    background-color: black;
+    color: white;
+}
+
